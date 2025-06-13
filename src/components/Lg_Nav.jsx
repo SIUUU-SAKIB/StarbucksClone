@@ -5,9 +5,9 @@ const Lg_Nav = () => {
   return (
     <div className="hidden md:flex items-center justify-between w-full px-12">
       <ul className="uppercase flex gap-4 tracking-tighter">
-        <li className="text-sm lg:text-xl font-semibold">MENU</li>
-        <li className="text-sm lg:text-xl font-semibold">Rewards</li>
-        <li className="text-sm lg:text-xl font-semibold">gift cards</li>
+        <li className="text-sm lg:text-lg font-bold">MENU</li>
+        <li className="text-sm lg:text-lg font-bold">Rewards</li>
+        <li className="text-sm lg:text-lg font-bold">gift cards</li>
       </ul>
       <ul className="flex items-center justify-center gap-4 lg:gap-8">
         <div className="flex gap-1 items-center">

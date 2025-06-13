@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div
       className={`
-        fixed top-0 right-0 h-full w-[70vw] bg-white z-0 shadow-lg
+        fixed top-0 right-0 h-full w-[80vw] bg-white z-5 shadow-lg
         transform transition-transform duration-500 ease-in-out
         ${clicked ? "translate-x-0" : "translate-x-full"}
       `}

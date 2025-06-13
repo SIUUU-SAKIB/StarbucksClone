@@ -9,7 +9,7 @@ const Navbar = () => {
   const { clicked, setClicked } = useContext(ContextValue);
   return (
     <>
-    <div className="max-w-screen border-b-1 shadow-md border-gray-200 px-8 md:px-16 lg:px-32 py-2 md:py-6 lg:py-8 flex justify-between items-center relative z-40 bg-white">
+    <div className="max-w-screen border-b-1 shadow-md border-gray-200 px-8 md:px-16 lg:px-32 py-2 md:py-3 lg:py-4 flex justify-between items-center relative z-40 bg-white">
       <img
         className="w-[40px] md:w-[50px] lg:w-[60px]"
         src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/800px-Starbucks_Corporation_Logo_2011.svg.png"
