@@ -3,7 +3,7 @@ import Navbar from "./pages/Navbar";
 
 const App = () => {
   return (
-    <div>
+    <div className="max-w-screen">
       <Navbar />
       <Outlet />
     </div>

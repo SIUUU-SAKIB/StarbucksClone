@@ -6,18 +6,20 @@ const Sidebar = () => {
   const { clicked } = useContext(ContextValue);
   return (
     <div
-      className={`h-screen min-w-[400px] shadow-md bg-white absolute top-21 ${
-        clicked ? "-right-30" : "-right-300"
-      } transition duration-300`}
+      className={`
+        fixed top-0 right-0 h-full w-[70vw] bg-white z-0 shadow-lg
+        transform transition-transform duration-500 ease-in-out
+        ${clicked ? "translate-x-0" : "translate-x-full"}
+      `}
     >
-      <ul className="flex flex-col gap-6 px-8 pb-10 pt-16">
+      <ul className="flex flex-col gap-6 px-8 pb-10 pt-28">
         <li className="text-2xl cursor-pointer">Menu</li>
         <li className="text-2xl cursor-pointer">Rewards</li>
         <li className="text-2xl cursor-pointer">Gift Cards</li>
       </ul>
       <div className="h-[1.5px] w-[220px] bg-black opacity-20 ml-8 "></div>
       <div className="flex gap-4 px-8 items-center pt-6">
-        <div className="font-semiBold text-md  px-3 py-1 border-1 rounded-full  cursor-pointer">
+        <div className="font-semiBold text-sm sm:text-md px-3 py-1 border-1 rounded-full  cursor-pointer">
           Sign in
         </div>
         <div className="bg-black px-3 py-1 text-white rounded-full cursor-pointer ">

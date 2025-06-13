@@ -1,24 +1,40 @@
-import {React, useContext} from "react";
+import { React, useContext } from "react";
 import Habmurger from "../components/Habmurger";
 import Sidebar from "../components/Sidebar";
-import { IoCloseOutline } from 'react-icons/io5';
-import { ContextValue } from './../Context/ContextProvider';
+import { IoCloseOutline } from "react-icons/io5";
+import { ContextValue } from "./../Context/ContextProvider";
+import Lg_Nav from "../components/Lg_Nav";
 
 const Navbar = () => {
-    const {clicked, setClicked} = useContext(ContextValue) 
+  const { clicked, setClicked } = useContext(ContextValue);
   return (
-    <div className="min-w-full px-6 py-4 flex justify-between items-center relative shadow-sm">
+    <>
+    <div className="max-w-screen border-b-1 shadow-md border-gray-200 px-8 md:px-16 lg:px-32 py-2 md:py-6 lg:py-8 flex justify-between items-center relative z-40 bg-white">
       <img
-        className="w-[50px] "
+        className="w-[40px] md:w-[50px] lg:w-[60px]"
         src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/800px-Starbucks_Corporation_Logo_2011.svg.png"
         alt="This is logo"
       />
-      <div className='flex items-center gap-2'>
-        <IoCloseOutline onClick={() => setClicked(false)} className={`text-2xl absolute ${clicked? 'right-8 block opacity-100':'right-16 hidden opacity-0'} cursor-pointer opacity-40 transition duration-800`}  />
-      <Habmurger />
+      <Lg_Nav/>
+
+      <div className="flex items-center gap-2 md:hidden">
+        <IoCloseOutline
+          onClick={() => setClicked(false)}
+          className={`text-2xl absolute cursor-pointer 
+    transition-opacity duration-500 ease-in
+    ${
+      clicked
+        ? "opacity-100 pointer-events-auto right-8"
+        : "opacity-0 pointer-events-none right-2"
+    }`}
+        />
+
+        <Habmurger />
       </div>
-      <Sidebar />
+     
     </div>
+     <Sidebar sidebar={clicked} />
+     </>
   );
 };
 
